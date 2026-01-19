@@ -4,13 +4,12 @@ numpy
 scikit-learn
 xgboost
 plotly
-reportlab
+matplotlib
 sqlalchemy
 openpyxl
 xlrd
+xlsxwriter
 pymysql
 psycopg2-binary
 pyodbc
-matplotlib
-fpdf2
-
+reportlab
