@@ -13,3 +13,4 @@ pymysql
 psycopg2-binary
 pyodbc
 reportlab
+fpdf2
