@@ -257,7 +257,8 @@ for modelo, df_imp in variaveis_importancia.items():
         pdf.cell(200, 10, txt=clean_text(f"{row['Variável']}: {row['Importância']:.4f}"), ln=True, align="L")
 
 # Exporta PDF
-pdf_output = pdf.output(dest="S").encode("latin-1", "ignore")
+pdf_output = pdf.output(dest="S")
+
 st.download_button(
     label="⬇️ Baixar relatório em PDF",
     data=pdf_output,
