@@ -1,0 +1,4 @@
+*.ftr
+*.ipynb
+__pycache__/
+.env
