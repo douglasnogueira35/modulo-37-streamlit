@@ -257,11 +257,16 @@ for modelo, df_imp in variaveis_importancia.items():
         pdf.cell(200, 10, txt=clean_text(f"{row['Variável']}: {row['Importância']:.4f}"), ln=True, align="L")
 
 # Exporta PDF
-pdf_output = pdf.output(dest="S")
+from io import BytesIO
+
+pdf_bytes = BytesIO()
+pdf.output(pdf_bytes)
+pdf_bytes.seek(0)
+
 
 st.download_button(
     label="⬇️ Baixar relatório em PDF",
-    data=pdf_output,
-    file_name="relatorio_completo.pdf",
+    data=pdf_bytes,
+    file_name="relatorio.pdf",
     mime="application/pdf"
 )
