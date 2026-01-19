@@ -135,7 +135,14 @@ if df_file is not None:
     # ================================
     st.subheader("📑 Relatório Final")
     df_resultados = pd.DataFrame(resultados).T
-    st.dataframe(df_resultados.style.highlight_max(axis=0, color="lightgreen"))
+    st.dataframe(
+    df_resultados.style.highlight_max(
+        axis=0,
+        color="lightgreen",
+        subset=df_resultados.select_dtypes(include=["number"]).columns
+    )
+)
+
 
     st.subheader("📌 Importância das Variáveis")
     for modelo, df_imp in variaveis_importancia.items():
