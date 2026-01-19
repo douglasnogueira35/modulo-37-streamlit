@@ -1,4 +1,5 @@
-*.ftr
-*.ipynb
 __pycache__/
 .env
+
+*.ftr
+*.ipynb
