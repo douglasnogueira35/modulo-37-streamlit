@@ -12,3 +12,4 @@ pymysql
 psycopg2-binary
 pyodbc
 matplotlib
+reportlab
